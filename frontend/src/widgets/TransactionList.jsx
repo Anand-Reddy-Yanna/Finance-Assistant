@@ -19,7 +19,7 @@ export default function TransactionList({ transactions = [], onRefresh }) {
           </div>
           <div className="flex flex-col gap-2">
             <button onClick={()=>navigator.clipboard.writeText(tx._id)} className="px-2 py-1 rounded bg-white/10 text-white text-sm">Copy ID</button>
-            <button onClick={()=>del(tx._id)} className="px-2 py-1 rounded bg-red-500/80 text-white text-sm">Delete</button>
+            {/* <button onClick={()=>del(tx._id)} className="px-2 py-1 rounded bg-red-500/80 text-white text-sm">Delete</button> */}
           </div>
         </div>
       ))}

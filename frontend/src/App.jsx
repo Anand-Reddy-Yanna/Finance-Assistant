@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import TransactionsPage from "./pages/Transactions";
+import UploadPage from "./pages/UploadPage";
 
 function Protected({ children }) {
   const { user } = React.useContext(AuthContext);
@@ -23,6 +24,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/upload" element={<UploadPage />} />
               <Route path="/register" element={<Register />} />
               <Route path="/dashboard" element={<Protected><Dashboard /></Protected>} />
               <Route path="/transactions" element={<Protected><TransactionsPage /></Protected>} />

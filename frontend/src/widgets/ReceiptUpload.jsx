@@ -29,7 +29,7 @@ export default function ReceiptUpload({ transactionId, onUploaded }) {
   return (
     <form onSubmit={submit} className="space-y-2">
       <input type="file" accept="image/*,.pdf" onChange={e=>setFile(e.target.files[0])} />
-      <button type="submit" disabled={loading} className="px-3 py-2 rounded bg-white/10 text-white">{loading ? "Uploading..." : "Upload"}</button>
+      <button type="submit" disabled={loading} className="px-3 py-2 rounded bg-gradient-to-r from-orange-500 to-cyan-400 text-white font-semibold shadow-lg hover:from-orange-400 hover:to-cyan-300 transition-all duration-300 text-white">{loading ? "Uploading..." : "Upload"}</button>
     </form>
   );
 }
